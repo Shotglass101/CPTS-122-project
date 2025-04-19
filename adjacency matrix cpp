@@ -1,0 +1,148 @@
+#include "adjacencyMatrix.hpp"
+/******************************************************************************************************************************************************************
+*                                                                                                                                                                                                                                                 *
+*     This file contains the member funcions for an adjacency matrix base class, constructed from a two by two array of integers. We make no assumption that the    *
+*     graph is undirected. If the graph is undirected, it is advisable to use a different class, as this class requires instantiation of both triangles of the      *
+*     adjacency matrix, which takes twice the time as instantiating only the upper or lower triangles.                                                                                            *
+*                                                                                                                                                                                                                                                 *
+*******************************************************************************************************************************************************************/
+
+/*******************************************************************************************************************************************************************
+*
+*     Constructor: This function takes the expected number of verticies of the graph represented by the adjacancy matrix and initializes a two dimensional array,
+*                        where each row and column of the adjacancy matrix represents the verticies of the graph and the numbers in each cell of the two dimensional
+*                        array are the number of edges connecting from the column vertex to the row vertex.
+*
+********************************************************************************************************************************************************************/
+AdjacencyMatrix::AdjacencyMatrix(int vertexCount)
+{
+      
+      mVertexCount = vertexCount;
+
+      mAdjacencyMatrix = (int**)calloc(vertexCount, sizeof(int*));
+      
+      for (int i = 0; i < vertexCount; ++i)
+      {
+      
+            mAdjacencyMatrix[i] = (int*)calloc(vertexCount, sizeof(int));
+
+            for (int j = 0; j < vertexCount; ++j)
+            {
+            
+                  mAdjacencyMatrix[i][j] = 0;
+            
+            }
+
+
+      }
+
+}
+/*******************************************************************************************************************************************************************
+*
+*     Destructor: This funcion deallocates the memory allocated on the heap for all column vectors of the matrix individually, then deallocates the array of arrays.
+*
+*********************************************************************************************************************************************************************/
+AdjacencyMatrix::~AdjacencyMatrix()
+{
+
+      for (int i = 0; i < mVertexCount; ++i)
+      {
+            
+            free(*(mAdjacencyMatrix + i));
+            
+      }
+
+      free(mAdjacencyMatrix);
+
+}
+/**/
+bool AdjacencyMatrix::setColumnVector(int newColumnVector[], int columnNumber, int newColumnVectorLength)
+{
+
+      if (columnNumber >= mVertexCount || columnNumber < 0)
+      {
+      
+            return false;
+      
+      }
+      else if(newColumnVectorLength != mVertexCount)
+      {
+
+            return false;
+
+      }
+      else
+      {
+      
+            for (int i = 0; i < mVertexCount; ++i)
+            {
+                  
+                  mAdjacencyMatrix[columnNumber][i] = newColumnVector[i];
+                  
+            }
+
+            return true;
+
+      }
+
+}
+/**/
+bool AdjacencyMatrix::setRowVector(int newRowVector[], int rowNumber, int newRowVectorLength)
+{
+
+      if (rowNumber >= mVertexCount || rowNumber < 0)
+      {
+
+            return false;
+
+      }
+      else if (newRowVectorLength != mVertexCount)
+      {
+            
+            return false;
+      
+      }
+      else
+      {
+      
+            for (int i = 0; i < mVertexCount; ++i)
+            {
+
+                  mAdjacencyMatrix[i][rowNumber] = newRowVector[i];
+
+            }
+
+            return true;
+      
+      }
+
+}
+/**/
+void AdjacencyMatrix::printAdjacencyMatrix(void) const
+{
+
+      system("cls");
+
+      for (int j = 0; j < mVertexCount; ++j)
+      {
+      
+            for (int i = 0; i < mVertexCount; ++i)
+            {
+                  
+                  std::cout << mAdjacencyMatrix[i][j];
+
+                  if (i + 1 == mVertexCount)
+                  {
+
+                        std::cout << "\n";
+
+                  }
+            }
+      
+      }
+
+      system("pause");
+
+      system("cls");
+
+}
