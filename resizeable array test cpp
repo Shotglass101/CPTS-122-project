@@ -1,0 +1,218 @@
+resizable array test cpp
+
+Brusseau, Alicia Rain
+​
+McBride, Jillian
+​
+#include "resizableArraysTest.hpp"
+
+/******************************************************************************************************************************************************
+*
+*     The constructor for the test class. All tests will be run from one function and only one constructor is needed.
+*
+******************************************************************************************************************************************************/
+testArrays::testArrays()
+{
+
+      resizableArrays<int> array1;
+
+      mDefaultConstructedArray = array1;
+
+      resizableArrays<int> array2(2);
+
+      mSizeSpecifiedArray = array2;
+
+      int staticComparisonArray[4];
+
+      int* dynamicComparisionArray = (int*)calloc(4, sizeof(int));
+
+      for (int i = 0; i < 4; ++i)
+      {
+      
+            staticComparisonArray[i] = *(dynamicComparisionArray + i) = 0;
+      
+      }
+
+      resizableArrays<int> staticInsertionArray(staticComparisonArray, 4);
+
+      resizableArrays<int> DynamicInsertionArray(dynamicComparisionArray, 4);
+
+      mStaticAllocationArray = staticInsertionArray;
+
+      mDynamicAllocationArray = DynamicInsertionArray;
+
+      for (int i = 0; i < 15; ++i)
+      {
+            
+            mTestStatus[i] = false;
+            
+      }
+      
+}
+
+void testArrays::runTest()
+{
+      /*******************************************************************************************************************************************************
+      *
+      *     Test to see if the first element of the default constructor constructed array is set to zero
+      *
+      ********************************************************************************************************************************************************/
+      if (mDefaultConstructedArray.getAtIndex(0) == 0)
+      {
+
+            mTestStatus[0] = true;
+
+      }
+      else
+      {
+
+            mTestStatus[0] = false;
+
+      }
+      /*******************************************************************************************************************************************************
+      *
+      *     Test for if the default constructor of the resizableArray class creates an appropriatly sized array.
+      *
+      ********************************************************************************************************************************************************/
+      if (mDefaultConstructedArray.getCurrentSize() != 1)
+      {
+
+            mTestStatus[1] = false;
+
+      }
+      else
+      {
+
+            mTestStatus[1] = true;
+
+      }
+      /*******************************************************************************************************************************************************
+      *
+      *     Test to see if the size specified array sets the array to the appropriate size.
+      *
+      ********************************************************************************************************************************************************/
+      if (mSizeSpecifiedArray.getCurrentSize() != 2)
+      {
+
+            mTestStatus[3] = false;
+
+      }
+      else
+      {
+
+            mTestStatus[3] = true;
+
+      }
+      /*******************************************************************************************************************************************************
+      *
+      *     Test to see if each cell in the size specified array is set to 0 by the constructor.
+      *
+      ********************************************************************************************************************************************************/
+      if (mTestStatus[3])
+      {
+
+            mTestStatus[2] = true;
+
+            for (int i = 0; i < 2; ++i)
+            {
+
+                  if (mSizeSpecifiedArray.getAtIndex(i) != 0)
+                  {
+
+                        mTestStatus[2] = false;
+
+                  }
+
+            }
+
+      }
+      else
+      {
+
+            mTestStatus[2] = false;
+
+      }
+      /*******************************************************************************************************************************************************
+      *
+      *     Test to see if the statically allocated array constructor sets the array to the appropriate size.
+      *
+      ********************************************************************************************************************************************************/
+      if (mStaticAllocationArray.getCurrentSize() != 4 || mDynamicAllocationArray.getCurrentSize() != 4)
+      {
+
+            mTestStatus[4] = false;
+
+      }
+      else
+      {
+
+            mTestStatus[4] = true;
+
+      }
+      /*******************************************************************************************************************************************************
+      *
+      *     Test to see if each cell in the size specified array is set to 0 by the constructor.
+      *
+      ********************************************************************************************************************************************************/
+      if (mTestStatus[4])
+      {
+
+            mTestStatus[5] = mTestStatus[6] = true;
+
+            for (int i = 0; i < 4; ++i)
+            {
+
+                  if (mDynamicAllocationArray.getAtIndex(i) != 0)
+                  {
+
+                        mTestStatus[6] = false;
+
+                  }
+
+                  if (mStaticAllocationArray.getAtIndex(i) != 0)
+                  {
+
+                        mTestStatus[5] = false;
+
+                  }
+
+            }
+
+      }
+      else
+      {
+
+            mTestStatus[5] = mTestStatus[6] = false;
+
+      }
+      /*******************************************************************************************************************************************************
+      *
+      *     Test for if the set at index function's defensive programming works.
+      *
+      ********************************************************************************************************************************************************/
+      if (mSizeSpecifiedArray.setAtIndex(2, 2) || mStaticAllocationArray.setAtIndex(4, 4) || mDynamicAllocationArray.setAtIndex(4, 4))
+      {
+
+            mTestStatus[7] = false;
+
+      }
+      else if (mSizeSpecifiedArray.setAtIndex(2, -1) || mStaticAllocationArray.setAtIndex(4, -1) || mDynamicAllocationArray.setAtIndex(4, -1))
+      {
+      
+            mTestStatus[7] = false;
+      
+      }
+      else
+      {
+      
+            mTestStatus[7] = true;
+
+      }
+      /*******************************************************************************************************************************************************
+      *
+      *     Test for if the set at index function sets at the correct index.
+      *
+      ********************************************************************************************************************************************************/
+
+
+}
