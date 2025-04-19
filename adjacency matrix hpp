@@ -1,0 +1,59 @@
+/*
+*
+*     
+*
+*/
+#pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#include <vector>
+#include <cstdlib>
+#include <iostream>
+
+class AdjacencyMatrix
+{
+public:
+      AdjacencyMatrix(int vertexCount);
+
+      ~AdjacencyMatrix(void);
+      
+      /*
+      *
+      *     Setters:
+      *
+      */
+
+      /*
+      *
+      **********************************************************************************************************************************
+      *
+      *     IMPORTANT: The length of the inserted column vector must be inserted into the function
+      *                    call from the function inserting it. This is essential as to prevent out
+      *                    of range errors. Before any function calling setColumnVector is written,
+      *                    ensure that the method by which the length of the inserted array is
+      *                    determined does not suffer from any logic error which may cause the reported
+      *                    lenght of the argued array to be inaccurate, such as pointer reduction.
+      *
+      *********************************************************************************************************************************/
+      bool setColumnVector(int newColumnVector[], int columnNumber, int newColumnVectorLength);
+
+      /**********************************************************************************************************************************
+      *
+      ***********************************************************************************************************************************
+      *
+      *     IMPORTANT: The length of the inserted row vector must be inserted into the function
+      *                    call from the function inserting it. This is essential as to prevent out
+      *                    of range errors. Before any function calling setRowVector is written,
+      *                    ensure that the method by which the length of the inserted array is
+      *                    determined does not suffer from any logic error which may cause the reported
+      *                    lenght of the argued array to be inaccurate, such as pointer reduction.
+      *
+      *********************************************************************************************************************************/
+      bool setRowVector(int newRowVector[], int rowNumber, int newRowVectorLength);
+
+      void printAdjacencyMatrix(void) const;
+
+private:
+      int mVertexCount;
+      int** mAdjacencyMatrix;
+
+};
