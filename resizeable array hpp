@@ -1,0 +1,302 @@
+#pragma once
+#include <cstdlib>
+#include <iostream>
+
+template <class T>
+class resizableArrays
+{
+public:
+      /**********************************************************************************************************************************************
+      *
+      *     The default constructor of the class: This will construct an array with one element.
+      *
+      **********************************************************************************************************************************************/
+      resizableArrays();
+
+      /**********************************************************************************************************************************************
+      *
+      *     Constructor which takes the length of the array as an argument.
+      *
+      **********************************************************************************************************************************************/
+      resizableArrays(int length);
+
+      /**********************************************************************************************************************************************
+      *
+      *     Constructor which takes the length of the array as an argument along with a C-stye array, dynamically or statically allocated, as its
+      *     arguments. I will be treating the array not producing out of bounds errors as a precondition for now, until I can figure out how to
+      *     handle out of range exceptions
+      *
+      **********************************************************************************************************************************************/
+      resizableArrays(T* arr, int length);
+
+      /**********************************************************************************************************************************************
+      *
+      *     Function which sets a new value to the given cell in the array;
+      *
+      **********************************************************************************************************************************************/
+      bool setAtIndex(T newEntry, int Index);
+
+      /**********************************************************************************************************************************************
+      *
+      *     Function which returns the current size of the array
+      *
+      **********************************************************************************************************************************************/
+      int getCurrentSize(void);
+
+      /**********************************************************************************************************************************************
+      *
+      *     Function which sets a new value to the given cell in the array;
+      *
+      **********************************************************************************************************************************************/
+      T getAtIndex(int index);
+
+      /**********************************************************************************************************************************************
+      *
+      *     Function which adds a new entry into the cell of the given value;
+      *
+      **********************************************************************************************************************************************/
+      bool pushAtIndex(int index, T newValue);
+      
+      /**********************************************************************************************************************************************
+      *
+      *     Function which removes an entry from the array;
+      *
+      ***********************************************************************************************************************************************/
+      bool RemoveAtIndex(int index);
+      /**/
+      void printArray(void);
+
+private:
+      T* mArray;
+
+      int mCurrentSize;
+
+      /**********************************************************************************************************************************************
+      *
+      *     This function resizes the array contained in mArray.
+      *
+      **********************************************************************************************************************************************/
+      bool resize(int sizeIncrease);
+
+};
+
+/*
+*
+* Default Constructor:
+*
+*/
+template <class T>
+resizableArrays<T>::resizableArrays()
+{
+
+      mCurrentSize = 1;
+      
+      mArray = (T*)calloc(mCurrentSize, sizeof(T));
+
+      
+}
+/**********************************************************************************************************************************************
+*
+*     Constructor which takes the length of the array as an argument.
+*
+**********************************************************************************************************************************************/
+template<class T>
+resizableArrays<T>::resizableArrays(int length)
+{
+
+      mCurrentSize = length;
+
+      mArray = (T*)calloc(mCurrentSize, sizeof(T));
+
+}
+/**********************************************************************************************************************************************
+*
+*     Constructor which takes the length of the array as an argument along with a C-stye array, dynamically or statically allocated, as its
+*     arguments. I will be treating the array argued in not producing out of bounds errors and being of the proper type as a precondition for
+*     now, until I can figure out how to handle out of range exceptions
+*
+**********************************************************************************************************************************************/
+template<class T>
+resizableArrays<T>::resizableArrays(T* arr, int length)
+{
+
+      mCurrentSize = length;
+
+      mArray = arr;
+
+}
+/**********************************************************************************************************************************************
+*
+*     Function which sets a new value to the given cell in the array;
+*
+**********************************************************************************************************************************************/
+template<class T>
+bool resizableArrays<T>::setAtIndex(T newEntry, int index)
+{
+
+      if (index > mCurrentSize)
+      {
+      
+            return false;
+      
+      }
+      else
+      {
+      
+            *(mArray + index) = newEntry;
+
+            return true;
+      
+      }
+
+}
+/**********************************************************************************************************************************************
+*
+*     Function which sets a new value to the given cell in the array; It is treated as a precondition that the index is in range (up until the
+*     point that I figure out exception handling).
+*
+**********************************************************************************************************************************************/
+template <class T>
+T resizableArrays<T>::getAtIndex(int index)
+{
+      //
+      //    Note to self: At some point, exception handling should be integrated into this function. I, at this point, don't have a solid
+      //    enough grasp on exception handling to integrate it into this function, so for now, the expectation will be that defensive
+      //    programming will be integrated into the classes which contain these arrays as member functions.
+      //
+      //    I cannot simply have the function return a designated error code value when the index is out of range, as there is no way to
+      //    guarentee what type this array will be instantiated as.
+      //
+      
+      return *(mArray + index);
+
+}
+/**********************************************************************************************************************************************
+*
+*     This function resizes the array contained in mArray.
+*
+**********************************************************************************************************************************************/
+template <class T>
+bool resizableArrays<T>::resize(int sizeChange)
+{
+
+      
+      T* newArray = (T*)calloc(mCurrentSize + sizeChange, sizeof(T));
+
+      if (newArray == nullptr)
+      {
+      
+            return false;
+      
+      }
+      else
+      {
+
+            for (int i = 0; i < mCurrentSize; ++i)
+            {
+                  
+                  *(newArray + i) = *(mArray + i);
+                  
+            }
+                  
+            free(mArray);
+
+            mArray = newArray;
+
+            mCurrentSize = mCurrentSize + sizeChange;
+
+            return true;
+            
+      }
+}
+/**********************************************************************************************************************************************
+*
+*     Function which adds a new entry into the cell of the given value;
+*
+**********************************************************************************************************************************************/
+template <class T>
+bool resizableArrays<T>::pushAtIndex(int index, T newValue)
+{
+
+      if(index > mCurrentSize + 1)
+      {
+      
+            return false;
+      
+      }
+      else
+      {
+      
+            bool status = resize(1);
+
+            if (status == false)
+            {
+            
+                  return status;
+            
+            }
+            else
+            {
+            
+                  for (int i = index; i < mCurrentSize - 1; ++i)
+                  {
+                        
+                        *(mArray + i + 1) = *(mArray + i);
+                        
+                  }
+
+                  *(mArray + index) = newValue;
+
+                  return status;
+            
+            }
+      
+      }
+
+}
+
+/**********************************************************************************************************************************************
+*
+*     Function which removes an entry from the array;
+*
+***********************************************************************************************************************************************/
+template <class T>
+bool resizableArrays<T>::RemoveAtIndex(int index)
+{
+
+      for (int i = index; i + 1 < mCurrentSize; ++i)
+      {
+      
+            *(mArray + i) = *(mArray + i + 1);
+      
+      }
+
+      bool status = resize(-1);
+
+      return status;
+
+}
+
+/**********************************************************************************************************************************************
+*
+*     Function which returns the current size of the array
+*
+**********************************************************************************************************************************************/
+template <class T>
+int resizableArrays<T>::getCurrentSize(void)
+{
+
+      return mCurrentSize;
+
+}
+/**/
+template <class T>
+void resizableArrays<T>::printArray(void)
+{
+      for (int i = 0; i < mCurrentSize; ++i)
+      {
+            
+            std::cout << *(mArray + i) << "\n";
+            
+      }
+}
