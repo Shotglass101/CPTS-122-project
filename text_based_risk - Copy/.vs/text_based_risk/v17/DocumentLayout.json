@@ -1,0 +1,221 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrixTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:adjacencyMatrixTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrixTest.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:adjacencyMatrixTest.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\TerritoryArray.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:TerritoryArray.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\GamePlay.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:GamePlay.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\MasterList.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:MasterList.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\territoryArray.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:territoryArray.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\territory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:territory.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\territory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:territory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\GamePlay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:GamePlay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:adjacencyMatrix.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrix.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7231B776-C7F2-40C7-9BE5-521314443B0E}|text_based_risk.vcxproj|solutionrelative:adjacencyMatrix.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MasterList.csv",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\MasterList.csv",
+              "RelativeDocumentMoniker": "MasterList.csv",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\MasterList.csv",
+              "RelativeToolTip": "MasterList.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2025-04-23T00:29:17.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TerritoryArray.cpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\TerritoryArray.cpp",
+              "RelativeDocumentMoniker": "TerritoryArray.cpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\TerritoryArray.cpp",
+              "RelativeToolTip": "TerritoryArray.cpp",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAYwNcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T00:19:42.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TerritoryArray.hpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\TerritoryArray.hpp",
+              "RelativeDocumentMoniker": "TerritoryArray.hpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\TerritoryArray.hpp",
+              "RelativeToolTip": "TerritoryArray.hpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-23T00:01:39.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "territory.hpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\territory.hpp",
+              "RelativeDocumentMoniker": "territory.hpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\territory.hpp",
+              "RelativeToolTip": "territory.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-23T00:08:46.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "territory.cpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\territory.cpp",
+              "RelativeDocumentMoniker": "territory.cpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\territory.cpp",
+              "RelativeToolTip": "territory.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T00:09:29.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GamePlay.hpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\GamePlay.hpp",
+              "RelativeDocumentMoniker": "GamePlay.hpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\GamePlay.hpp",
+              "RelativeToolTip": "GamePlay.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-23T00:10:19.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "adjacencyMatrix.hpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrix.hpp",
+              "RelativeDocumentMoniker": "adjacencyMatrix.hpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrix.hpp",
+              "RelativeToolTip": "adjacencyMatrix.hpp",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-22T20:38:40.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "adjacencyMatrix.cpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrix.cpp",
+              "RelativeDocumentMoniker": "adjacencyMatrix.cpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrix.cpp",
+              "RelativeToolTip": "adjacencyMatrix.cpp",
+              "ViewState": "AgIAAFwCAAAAAAAAAAAgwHQCAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-22T20:39:15.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "adjacencyMatrixTest.hpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrixTest.hpp",
+              "RelativeDocumentMoniker": "adjacencyMatrixTest.hpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrixTest.hpp",
+              "RelativeToolTip": "adjacencyMatrixTest.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-22T21:09:14.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-22T20:37:51.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "adjacencyMatrixTest.cpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrixTest.cpp",
+              "RelativeDocumentMoniker": "adjacencyMatrixTest.cpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\adjacencyMatrixTest.cpp",
+              "RelativeToolTip": "adjacencyMatrixTest.cpp",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAAHsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-22T21:09:55.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GamePlay.cpp",
+              "DocumentMoniker": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\GamePlay.cpp",
+              "RelativeDocumentMoniker": "GamePlay.cpp",
+              "ToolTip": "C:\\Users\\Jillian\\Documents\\CPT_S 122\\text_based_risk\\text_based_risk\\GamePlay.cpp",
+              "RelativeToolTip": "GamePlay.cpp",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAOkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-23T00:10:29.635Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

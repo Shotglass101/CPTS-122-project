@@ -1,0 +1,6 @@
+﻿  GamePlay.cpp
+  TerritoryArray.cpp
+  main.cpp
+C:\Users\Jillian\Documents\CPT_S 122\text_based_risk\text_based_risk\main.cpp(15,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  text_based_risk.vcxproj -> C:\Users\Jillian\Documents\CPT_S 122\text_based_risk\text_based_risk\x64\Debug\text_based_risk.exe
