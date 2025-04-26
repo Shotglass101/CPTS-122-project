@@ -95,6 +95,9 @@ public:
 	bool check_win();
 	void add_more_armies(int army_amount, string player);  
 	int check_continent(string player); 
+
+        bool has_enemies(int terrtiory, string opp_player); 
+ 
  
 
 	Territory& getIndex(int index); 
