@@ -97,6 +97,8 @@ public:
 	int check_continent(string player); 
 
         bool has_enemies(int terrtiory, string opp_player); 
+
+	void list_borders(int territory, string player); 
  
  
 
