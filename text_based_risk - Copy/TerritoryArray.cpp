@@ -127,6 +127,8 @@ for (int i = 0; i < 18; i++)
 		cout << "Name: " << this->masterList[i].getName() << endl;
 		cout << "Region: " << this->masterList[i].getRegion() << endl;
 		cout << "Current Number of Armies: " << this->masterList[i].getArmies() << endl;
+		court << "List of enemy borders:" << endl; 
+		 list_borders(i, player); 
 		cout << "\n" << endl; 
 	}
 }
@@ -234,6 +236,18 @@ bool TerritoryArray::has_enemies(int terrtiory, string opp_player)
 
 	return yes; 
 }
+
+void TerritoryArray::list_borders(int territory, string player)
+{
+	for (int i = 0; i < 18; i++)
+	{
+		if (check_borders(territory, i) == true && this->masterList[i].getOccupier() != player)
+		{
+			cout << this->masterList[i].getName() << endl; 
+		}
+	}
+}
+ 
 Territory& TerritoryArray::getIndex(int index)
 {
 	return this->masterList[index]; 
