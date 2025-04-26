@@ -219,6 +219,21 @@ int TerritoryArray::check_continent(string player)
 
 }
 
+bool TerritoryArray::has_enemies(int terrtiory, string opp_player)
+{
+	bool yes = false; 
+
+	for (int i = 0; i < 18; i++)
+	{
+		if (check_borders(terrtiory, i) == true && this->masterList[i].getOccupier() == opp_player)
+		{
+			yes = true; 
+			break; 
+		}
+	}
+
+	return yes; 
+}
 Territory& TerritoryArray::getIndex(int index)
 {
 	return this->masterList[index]; 
