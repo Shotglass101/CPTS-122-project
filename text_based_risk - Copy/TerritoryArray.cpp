@@ -119,39 +119,44 @@ void TerritoryArray::add_more_armies(int army_amount, string player)
 {
 
 	int selection = 0; 
+for (int i = 0; i < 18; i++)
+{
+	if (this->masterList[i].getOccupier() == player) 
+	{
+		cout << "Representative Number: " << this->masterList[i].getRepNum() << endl; 
+		cout << "Name: " << this->masterList[i].getName() << endl;
+		cout << "Region: " << this->masterList[i].getRegion() << endl;
+		cout << "Current Number of Armies: " << this->masterList[i].getArmies() << endl;
+		cout << "\n" << endl; 
+	}
+}
+
+cout << "\n You have " << army_amount << " of armies" << endl; 
+
+for (int i = 0; i < army_amount; i++)
+{
+	cout << "Where would you like to put your army? Please type the representative number for the terriotry" << endl;
+	cin >> selection;  
+
+	while (this->masterList[selection].getOccupier() != player)
+	{
+		cout << "You can't put an army there because you don't own that territory. Make another selection" << endl; 
+		cin >> selection; 
+	}
+
 	for (int i = 0; i < 18; i++)
-	{
-		if (this->masterList[i].getOccupier() == player) 
+	{ 
+		if (this->masterList[i].getRepNum() == selection) 
 		{
-			cout << "Representative Number: " << this->masterList[i].getRepNum() << endl; 
-			cout << "Name: " << this->masterList[i].getName() << endl;
-			cout << "Region: " << this->masterList[i].getRegion() << endl;
-			cout << "Current Number of Armies: " << this->masterList[i].getArmies() << endl;
-			cout << "\n" << endl; 
+			
+			this->masterList[i].setArmies(this->masterList[i].getArmies() + 1); 
+			
+
 		}
 	}
 
-	cout << "\n You have " << army_amount << " of armies" << endl; 
 
-	for (int i = 0; i < army_amount; i++)
-	{
-		cout << "Where would you like to put your army? Please type the representative number for the terriotry" << endl;
-		cin >> selection;  
-
-
-		for (int i = 0; i < 18; i++)
-		{ 
-			if (this->masterList[i].getRepNum() == selection) 
-			{
-				
-				this->masterList[i].setArmies(this->masterList[i].getArmies() + 1); 
-				
-
-			}
-		}
-
-
-	}
+}
 }
 
 int TerritoryArray::check_continent(string player)
