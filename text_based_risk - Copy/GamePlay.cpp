@@ -157,7 +157,7 @@ void GamePlay::risk()
 		cout << "Would you like to attack? Type y for yes type n for no" << endl;
 		cin >> y_n;
 
-		while(y_n == 'y') 
+		if(y_n == 'y')  
 		{
 			for (int i = 0; i < 18; i++)
 			{
