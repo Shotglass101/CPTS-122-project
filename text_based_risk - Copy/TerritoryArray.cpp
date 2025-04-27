@@ -1,9 +1,10 @@
 #include "TerritoryArray.hpp"
-
+//Entire file made by: Jillian McBride
 TerritoryArray::~TerritoryArray()
 {
 }
 
+//This function prints out the masterList. Takes no inputs or outputs
 void TerritoryArray::print()
 {
 	for (int i = 0; i < 18; i++)
@@ -16,6 +17,8 @@ void TerritoryArray::print()
 	}
 }
 
+//This function divides the territories evenly and randomly between player 1 and player 2
+//Also takes no inputs or outputs
 void TerritoryArray::divideTerritories()
 {
 	int territory_amount = 0;
@@ -46,6 +49,7 @@ void TerritoryArray::divideTerritories()
 	}
 }
 
+//This function prints the players territories that they currently own in the game
 void TerritoryArray::print_players_territories()
 {
 	cout << "Player 1's territories: " << endl;
@@ -77,6 +81,9 @@ void TerritoryArray::print_players_territories()
 	}
 }
 
+//This function checks to see if all of the territories have one occupier.
+//It checks to see if all of the territories either all have "P1" as their occupier, or "P2"
+//Takes no inputs or outputs
 bool TerritoryArray::check_win()
 {
 	int p1_territory_count = 0;
@@ -115,6 +122,8 @@ bool TerritoryArray::check_win()
 
 }
 
+//This function adds more armies to a territory of the player's choosing. It takes a input of a integar 
+//for the amount of armies wthe player is distributing, and a string with the player's name. 
 void TerritoryArray::add_more_armies(int army_amount, string player) 
 {
 
@@ -161,6 +170,8 @@ for (int i = 0; i < army_amount; i++)
 }
 }
 
+//This function chekcs to see if a player has gained a continent or not. It takes a input of the player's name, 
+//and outputs the total number of armies they should have. If the player doesn't get a continent, then it just returns 0.
 int TerritoryArray::check_continent(string player)
 {
 	int northside = 0; 
@@ -221,6 +232,8 @@ int TerritoryArray::check_continent(string player)
 
 }
 
+//This function was created to check and see if the territory that the user wants to attack from actually has a border with a enemy territory. 
+//This way, we can better avoid a situation were a player chooses to attack from a territory, but there's no other territory that borders it to attack. 
 bool TerritoryArray::has_enemies(int terrtiory, string opp_player)
 {
 	bool yes = false; 
@@ -237,6 +250,8 @@ bool TerritoryArray::has_enemies(int terrtiory, string opp_player)
 	return yes; 
 }
 
+//this function lists out all the borders that a territory has that isn't owned by the player inputed into the function. The territory is represented 
+//by the number inputed into the function
 void TerritoryArray::list_borders(int territory, string player)
 {
 	for (int i = 0; i < 18; i++)
@@ -247,7 +262,8 @@ void TerritoryArray::list_borders(int territory, string player)
 		}
 	}
 }
- 
+
+//This function returns the territory at the specific index that is inputed into the function
 Territory& TerritoryArray::getIndex(int index)
 {
 	return this->masterList[index]; 
